@@ -1,0 +1,108 @@
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+body {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #fafafa;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#progressbarCourses {
+    text-align: center;
+}
+
+#progressbarGroups {
+    text-align: center;
+}
+
+progress {
+    width: 100%;
+    display: block;
+}
+
+.selectableItem li:hover {
+    background-color: #00E676;
+    cursor: pointer;
+}
+
+.selectableItem li:active {
+    background-color: whitesmoke;
+}
+
+.selectableItem {
+    overflow-y: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.selectablemenu {
+    max-height: 50%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.selectableItem li {
+    margin: 1px;
+    font-size: 1em;
+    border-radius: 2px;
+}
+
+#accordionGroup {
+    max-height: 80%;
+    height: 100%;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+#accordionGroup ol {
+    max-height: 50%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#accordionGroup li {
+    overflow-x: hidden;
+}
+
+#accordionGroup a {
+    float: left;
+}
+
+#scheduleDiv {
+    background-color: #eee;
+}
+
+#showSaveSchedule {
+    float: right;
+}
+
+#scheduleTable {
+    table-layout: fixed;
+}
+
+th, td {
+    font-size: 1em;
+    margin: 0;
+    border-collapse: collapse;
+    border: 1px solid #C0C0C0;
+    background: #F0F0F0;
+}
+
+td {
+    width: 90px;
+    font-size: 0.7rem;
+    word-wrap: break-word;
+}
+
+th {
+    background: #666;
+    color: white;
+}
+

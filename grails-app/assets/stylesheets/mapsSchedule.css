@@ -1,0 +1,29 @@
+.subject-area{
+    /*border: 4px solid white;*/
+    overflow: auto;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+}
+.title-subject{
+    text-align: center;
+}
+.day-subject{
+    width: 31%;
+    float: left;
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    margin: 1%;
+    background-color: #546e7a;
+}
+.day-subject:hover{
+    cursor: hand;
+    background-color: #607d8b;
+}
+.day-subject:hover p{
+    color: black;
+}
+.day-subject p{
+    color: white;
+}
