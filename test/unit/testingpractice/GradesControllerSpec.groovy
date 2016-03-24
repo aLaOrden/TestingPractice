@@ -15,7 +15,7 @@ estudiante
 Miguel Angel Asencio Hurtado terminar sesion
 navegacion estudiante
 inicio
-apoyo académico
+apoyo academico
 archivo
 certificados
 mi historia academica
@@ -37,7 +37,7 @@ estudiantes que deben nivelar una asignatura [2]
 
 \t2545 | ingenieria electronica
 
-  01\tperiodo académico | 2014-I\t\t
+  01\tperiodo academico | 2014-I\t\t
 codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
 aprobado
 1000003-0\tALGEBRA LINEAL\t4\t0\t4\tB\t4\t1\t\t4.0
@@ -99,7 +99,7 @@ aprobado
 2016506-0\tSENALES Y SISTEMAS I\t4\t0\t4\tC\t3\t1\t\t3.8
 aprobado
 5-0\tRECONOCIMIENTO IDIOMA NIVEL I - II - III - IV\t0\t0\t0\tP\t12\t1\tF\tAP
-  02\tperiodo académico | 2014-II\t\t
+  02\tperiodo academico | 2014-II\t\t
 codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
 aprobado
 2016353-4\tBASES DE DATOS\t4\t0\t4\tC\t3\t1\t\t4.2
@@ -109,7 +109,7 @@ aprobado
 2025963-1\tMATEMATICAS DISCRETAS I\t4\t0\t4\tB\t4\t1\t\t3.7
 aprobado
 2025982-2\tSISTEMAS DE INFORMACIoN\t4\t0\t4\tC\t3\t1\t\t3.7
-  03\tperiodo académico | 2015-I\t\t
+  03\tperiodo academico | 2015-I\t\t
 codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
 aprobado
 2015174-2\tINTRODUCCIoN A LA TEORIA DE LA COMPUTACIoN\t4\t0\t4\tB\t4\t1\t\t3.6
@@ -119,7 +119,7 @@ aprobado
 2016701-1\tINGENIERIA DE SOFTWARE I\t4\t0\t4\tC\t3\t1\t\t4.1
 aprobado
 2025971-3\tOPTIMIZACIoN\t4\t0\t4\tC\t3\t1\t\t4.5
-  04\tperiodo académico | 2015-II\t\t
+  04\tperiodo academico | 2015-II\t\t
 codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
 aprobado
 2016703-1\tPENSAMIENTO SISTEMICO\t4\t0\t4\tC\t3\t1\t\t4.3
@@ -132,8 +132,8 @@ aprobado
 aprobado
 2025995-2\tINTRODUCCIoN A LOS SISTEMAS INTELIGENTES\t3\t0\t3\tC\t3\t1\t\t4.0
  \t\t
-Promedio Académico\t[3.6]
-Promedio Aritmético Ponderado Acumulado - PAPA\t[3.6]
+Promedio Academico\t[3.6]
+Promedio Aritmetico Ponderado Acumulado - PAPA\t[3.6]
 \t
 80.0%
 % de avance en los creditos exigidos del plan de estudios
@@ -148,12 +148,12 @@ aprobados\t51\t49\t34\t134\t12\t146\t
 aprobados plan\t51\t48\t33\t132\t--\t132\t
 pendientes\t0\t33\t0\t33\t4\t37\t
 inscritos\t57\t61\t34\t152\t0\t152\t
-Créditos excedentes\tFundamentacion\t0\tDisciplinar-Profesional\t0\tTotal creditos excedentes\t0\t
+Creditos excedentes\tFundamentacion\t0\tDisciplinar-Profesional\t0\tTotal creditos excedentes\t0\t
 Total de creditos cancelados en los periodos cursados\t9\t
 resumen de creditos\t
 Cupo adicional de creditos\t80\t
 Cupo creditos\t79\t
-cupo de creditos menos créditos pendientes\t42\t
+cupo de creditos menos creditos pendientes\t42\t
 
 
 version impresion
