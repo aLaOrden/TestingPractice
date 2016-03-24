@@ -175,14 +175,14 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         def periods = controller.getPeriods(academicRecord)
         def periodsSize = periods.size()
         then:"size of periods"
-        periodsSize == 1
+        periodsSize == 4
     }
 
     def "testing periods name"() {
         when:
         def periodNames = controller.getPeriodNames(academicRecord)
         then:"last item of periods"
-        periodNames[7].toString().trim().equals("2015-II")
+        periodNames[3].toString().trim().equals("2015-II")
     }
 
     def "getPeriods accepts null values"() {
@@ -200,7 +200,7 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         def subjects = controller.getSubjects(periods)
 
         then: "The subjects size is..."
-        subjects.size() == 4
+        subjects.size() == 42
     }
     def "get subjects PAPA"(){
         given: "A periods array"
@@ -212,7 +212,7 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
 
         where: "The PAPA in each period is..."
         a << [0, 1, 2, 3]
-        c << [4.592857142857143, 4.404166666666666, 4.405882352941176, 4.35576923076923]
+        c << [3.525510204081632, 3.5945945945945947, 3.643548387096774, 3.6892857142857145]
     }
 
     def "get subjects PA"(){
@@ -225,10 +225,10 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
 
         where: "The PA in each period is..."
         a || c
-        0 || 4.592857142857143
-        1 || 4.404166666666666
-        2 || 4.405882352941176
-        3 || 4.35576923076923
+        0 || 3.592391304347826
+        1 || 3.6571428571428575
+        2 || 3.701694915254238
+        3 || 3.742537313432836
     }
 
     def "get progress"(){
@@ -243,10 +243,10 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         0 || 51
         1 || 51
         2 || 81
-        3 || 45
+        3 || 49
         4 || 33
-        5 || 17
-        6 || 12
+        5 || 34
+        6 || 16
         7 || 12
     }
 
