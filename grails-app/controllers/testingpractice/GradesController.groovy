@@ -27,6 +27,10 @@ class GradesController {
 
     def calculateAcademicRecord(){
         def academicRecord = String.valueOf( params.academicRecord )
+        render calculateAcadRecord(academicRecord)
+    }
+
+    def calculateAcadRecord = { academicRecord ->
         def codeStudyPlan = Integer.parseInt(String.valueOf(academicRecord.find(planPattern)).split('\\|')[0].trim())
         def nameStudyPlan = String.valueOf(academicRecord.find(planPattern)).trim()
 
@@ -35,7 +39,7 @@ class GradesController {
 
         def data = getPAPA(periods) + "&&&" + getPA(periods) + "&&&" + getPeriodNames(academicRecord) + "&&&"
         data += getSubjects(periods) + "&&&" + advanceComponents + "&&&" + getAdvance(advanceComponents) + "&&&" + nameStudyPlan
-        render data
+        return data
     }
 
     def calculateProjection(){

@@ -259,5 +259,18 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         expect:
         sum == (134 as BigDecimal)
     }
+
+    @Unroll
+    def "calculates the academic record"(){
+        given: "the academic record"
+        def record = controller.calculateAcadRecord(academicRecord)
+
+        expect:
+        record[i] == rec
+
+        where: "the first 4 positions are..."
+        i   << [0, 1, 2, 3]
+        rec << [3.525510204081632, 3.5945945945945947, 3.643548387096774, 3.6892857142857145]
+    }
 }
 
