@@ -251,5 +251,13 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         7 || 12
     }
 
+    def "get sum of credits"(){
+        given: "A periods array"
+        def periods = controller.getPeriods(academicRecord)
+        def sum = controller.getSumCredits(periods)
+
+        expect:
+        sum == (134 as BigDecimal)
+    }
 }
 
