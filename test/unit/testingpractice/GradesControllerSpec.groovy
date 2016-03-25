@@ -215,7 +215,8 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         c << [3.525510204081632, 3.5945945945945947, 3.643548387096774, 3.6892857142857145]
     }
 
-    def "get subjects PA"(){
+    @Unroll
+    def "get subjects PA for period #a is #c"(){
         given: "A periods array"
         def periods = controller.getPeriods(academicRecord)
         def PAPA = controller.getPA(periods)
