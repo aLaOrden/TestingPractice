@@ -1,6 +1,21 @@
 # Testing Practice
-  - [x] Conocer una especificación
-  - [x] Iniciando las pruebas
-  - [ ] Pruebas unitarias adicionales
-  - [ ] Pruebas de integración
-  - [ ] Realice un informe por parte de todo el equipo
+  - [x] 1  Conocer una especificación
+  - [x] 1.1 Feature Methods
+  - [x] 1.2 Bloques
+  - [x] 2 Iniciando las pruebas
+  - [x] 2.1 testing periods size
+  - [x] 2.2 getPeriods accepts null values
+  - [x] 2.3 get subjects PAPA
+  - [x] 2.4 get subjects PA
+  - [ ] 3 Pruebas unitarias adicionales
+  - [x] 3.1 getSumCredits
+  - [x] 3.2 calculateAcademicRecord
+  - [ ] 3.3 Prueba con tuberías
+  - [ ] 3.4 Pruebas en método aparte
+  - [ ] 4 Pruebas de integración
+  - [ ] 4.1 Pruebas existentes
+  - [ ] 4.2 Pruebas 10 materias
+  - [ ] 4.3 Nuevo controlador
+  - [ ] 4.4 Pruebas extra al controlador
+  - [ ] 4.5 Asignaturas repetidas y pruebas
+  - [ ] 5 Realice un informe por parte de todo el equipo

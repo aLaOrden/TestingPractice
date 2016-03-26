@@ -10,159 +10,153 @@ import spock.lang.Unroll
 @TestFor(GradesController)
 class GradesControllerSpec extends Specification {
 
-    def academicRecord = """SELECCIONE EL ROL DE USUARIO
-estudiante
-Miguel Angel Asencio Hurtado terminar sesion
-navegacion estudiante
-inicio
-apoyo academico
-archivo
-certificados
-mi historia academica
-mis datos personales
-catalogo prog. curriculares
-documentacion
-informacion financiera
-libre acceso
-zona de busquedas
-
-inicio > archivo > mi historia academica
-MI HISTORIA ACADEMICA/
-version impresion+ preguntas frecuentes+ descarga de archivos
-\t\t\t
-2879 | ingenieria de sistemas y computacion
-estudiantes que deben nivelar una asignatura [2]
-
-
-
-\t2545 | ingenieria electronica
-
-  01\tperiodo academico | 2014-I\t\t
-codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
-aprobado
-1000003-0\tALGEBRA LINEAL\t4\t0\t4\tB\t4\t1\t\t4.0
-aprobado
-1000004-0\tCALCULO DIFERENCIAL\t4\t0\t4\tB\t4\t1\t\t4.0
-aprobado
-1000005-0\tCALCULO INTEGRAL\t4\t0\t4\tB\t4\t1\t\t3.7
-aprobado
-1000006-0\tCALCULO EN VARIAS VARIABLES\t4\t0\t4\tB\t4\t1\t\t3.4
-aprobado
-1000007-0\tECUACIONES DIFERENCIALES\t4\t0\t4\tB\t4\t1\t\t3.3
-aprobado
-2015159-0\tVARIABLE COMPLEJA\t4\t0\t4\tL\t4\t1\t\t3.3
-aprobado
-1000017-0\tFUNDAMENTOS DE ELECTRICIDAD Y MAGNETISMO\t6\t0\t6\tB\t4\t1\t\t3.0
-aprobado
-1000019-0\tFUNDAMENTOS DE MECANICA\t6\t0\t6\tB\t4\t1\t\t3.4
-aprobado
-1000013-0\tPROBABILIDAD Y ESTADISTICA FUNDAMENTAL\t4\t0\t4\tB\t3\t1\t\t3.0
-aprobado
-1000040-0\tINTRODUCCIoN A LA CIENCIA DE MATERIALES\t4\t0\t4\tL\t3\t1\t\t3.9
-aprobado
-2015702-0\tGERENCIA Y GESTIoN DE PROYECTOS\t4\t0\t4\tB\t3\t1\t\t4.0
-aprobado
-2015703-0\tINGENIERIA ECONoMICA\t4\t0\t4\tB\t3\t1\t\t3.3
-aprobado
-2015712-0\tDISENO DE PLANTAS Y EQUIPOS\t4\t0\t4\tL\t3\t1\t\t3.0
-aprobado
-2015734-0\tPROGRAMACIoN DE COMPUTADORES\t6\t0\t6\tC\t3\t1\t\t3.5
-no aprobado
-2015970-0\tMETODOS NUMERICOS\t4\t0\t4\tB\t3\t1\t\t2.5
-aprobado
-2015970-8\tMETODOS NUMERICOS\t4\t0\t4\tB\t3\t1\t\t4.8
-aprobado
-2016375-0\tPROGRAMACIoN ORIENTADA A OBJETOS\t4\t0\t4\tC\t3\t1\t\t3.0
-no aprobado
-2016375-0\tPROGRAMACIoN ORIENTADA A OBJETOS\t4\t0\t4\tC\t3\t1\t\t2.5
-aprobado
-2016489-0\tCIRCUITOS ELECTRICOS I\t4\t0\t4\tL\t3\t1\t\t3.2
-aprobado
-2016495-0\tELECTRoNICA ANALOGA I\t6\t0\t6\tL\t4\t1\t\t3.2
-aprobado
-2016498-0\tELECTRoNICA DIGITAL I\t5\t0\t5\tC\t4\t1\t\t4.0
-aprobado
-2016500-0\tFISICA DE SEMICONDUCTORES\t4\t0\t4\tL\t3\t1\t\t3.3
-aprobado
-2016502-0\tINTRODUCCIoN A INGENIERIA ELECTRoNICA\t5\t0\t5\tL\t5\t1\t\t3.3
-aprobado
-2016509-0\tTALLER DE INGENIERIA ELECTRoNICA\t4\t0\t4\tL\t2\t1\t\t4.2
-aprobado
-2016699-4\tESTRUCTURAS DE DATOS\t4\t0\t4\tC\t3\t1\t\t3.6
-aprobado
-2024296-0\tSEGURIDAD ELECTRICA\t3\t0\t3\tL\t3\t1\t\t4.6
-aprobado
-2025970-3\tMODELOS Y SIMULACIoN\t4\t0\t4\tC\t3\t1\t\t3.3
-aprobado
-2025975-1\tINTRODUCCIoN A LA INGENIERIA DE SISTEMAS Y COMPUTACIoN\t4\t0\t4\tC\t3\t1\t\t4.5
-aprobado
-2016506-0\tSENALES Y SISTEMAS I\t4\t0\t4\tC\t3\t1\t\t3.8
-aprobado
-5-0\tRECONOCIMIENTO IDIOMA NIVEL I - II - III - IV\t0\t0\t0\tP\t12\t1\tF\tAP
-  02\tperiodo academico | 2014-II\t\t
-codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
-aprobado
-2016353-4\tBASES DE DATOS\t4\t0\t4\tC\t3\t1\t\t4.2
-aprobado
-2016696-2\tALGORITMOS\t4\t0\t4\tB\t3\t1\t\t5.0
-aprobado
-2025963-1\tMATEMATICAS DISCRETAS I\t4\t0\t4\tB\t4\t1\t\t3.7
-aprobado
-2025982-2\tSISTEMAS DE INFORMACIoN\t4\t0\t4\tC\t3\t1\t\t3.7
-  03\tperiodo academico | 2015-I\t\t
-codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
-aprobado
-2015174-2\tINTRODUCCIoN A LA TEORIA DE LA COMPUTACIoN\t4\t0\t4\tB\t4\t1\t\t3.6
-aprobado
-2016697-2\tARQUITECTURA DE COMPUTADORES\t4\t0\t4\tC\t3\t1\t\t4.2
-aprobado
-2016701-1\tINGENIERIA DE SOFTWARE I\t4\t0\t4\tC\t3\t1\t\t4.1
-aprobado
-2025971-3\tOPTIMIZACIoN\t4\t0\t4\tC\t3\t1\t\t4.5
-  04\tperiodo academico | 2015-II\t\t
-codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.
-aprobado
-2016703-1\tPENSAMIENTO SISTEMICO\t4\t0\t4\tC\t3\t1\t\t4.3
-aprobado
-2016707-1\tSISTEMAS OPERATIVOS\t4\t0\t4\tC\t3\t1\t\t4.6
-aprobado
-2019764-1\tAPRENDIZAJE DE MAQUINA\t4\t0\t4\tL\t4\t1\t\t3.5
-aprobado
-2025967-2\tREDES DE COMPUTADORES\t4\t0\t4\tC\t3\t1\t\t4.0
-aprobado
-2025995-2\tINTRODUCCIoN A LOS SISTEMAS INTELIGENTES\t3\t0\t3\tC\t3\t1\t\t4.0
- \t\t
-Promedio Academico\t[3.6]
-Promedio Aritmetico Ponderado Acumulado - PAPA\t[3.6]
-\t
-80.0%
-% de avance en los creditos exigidos del plan de estudios
-
-\t\t\t\t\t\t\t\t\t\t
-\t
-\t\t\t\t\t\t\t\t\t\t
-creditos\tplan de estudios\tnivel\ttotal estudiante\t
-fundam.\tdiscipl.\tlibre e.\ttotal
-exigidos\t51\t81\t33\t165\t16\t181\t
-aprobados\t51\t49\t34\t134\t12\t146\t
-aprobados plan\t51\t48\t33\t132\t--\t132\t
-pendientes\t0\t33\t0\t33\t4\t37\t
-inscritos\t57\t61\t34\t152\t0\t152\t
-Creditos excedentes\tFundamentacion\t0\tDisciplinar-Profesional\t0\tTotal creditos excedentes\t0\t
-Total de creditos cancelados en los periodos cursados\t9\t
-resumen de creditos\t
-Cupo adicional de creditos\t80\t
-Cupo creditos\t79\t
-cupo de creditos menos creditos pendientes\t42\t
-
-
-version impresion
-
-inicio | comentarios y sugerencias | preguntas frecuentes | descarga de archivos | mapa del sitio | noticias | terminos de uso
-Sistema de Informacion Academica [Nivel Nacional]
-Ciudad Universitaria, Cra 30 # 45-03 - Edificio 103 Polideportivo 2 Piso, Bogota - Colombia | www.registro.unal.edu.co | divregistro_bog@unal.edu.co
-Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad Nacional de Colombia 2016
-"""
+    def academicRecord = "\n" +
+            "SELECCIONE EL ROL DE USUARIO\n" +
+            "estudiante\n" +
+            "Ld Erick Stevens Velasco Amaya terminar sesion\n" +
+            "navegacion estudiante\n" +
+            "inicio\n" +
+            "apoyo academico\n" +
+            "archivo\n" +
+            "certificados\n" +
+            "mi historia academica\n" +
+            "mis datos personales\n" +
+            "catalogo prog. curriculares\n" +
+            "documentacion\n" +
+            "informacion financiera\n" +
+            "libre acceso\n" +
+            "zona de busquedas\n" +
+            " \n" +
+            "inicio > archivo > mi historia academica\n" +
+            "MI HISTORIA ACADEMICA/\n" +
+            "version impresion+ preguntas frecuentes+ descarga de archivos\n" +
+            "\t\t\t\n" +
+            "2879 | ingenieria de sistemas y computacion \n" +
+            "estudiantes que deben nivelar dos asignaturas [3]\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\t2543 | ingenieria de sistemas\n" +
+            "\n" +
+            "  01\tperiodo academico | 2011-II\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "aprobado\n" +
+            "1000001-21\tMATEMATICAS BASICAS\t4\t8\t12\tP\t4\t1\t\t3.7\n" +
+            "aprobado\n" +
+            "1000002-33C\tLECTO-ESCRITURA\t4\t7\t11\tP\t4\t1\t\t4.5\n" +
+            "aprobado\n" +
+            "2015734-33C\tPROGRAMACION DE COMPUTADORES\t6\t0\t6\tC\t3\t1\t\t4.4\n" +
+            "aprobado\n" +
+            "2016749-33C\tINTRODUCCION A LA INGENIERIA DE SISTEMAS\t4\t0\t4\tC\t3\t1\t\t4.5\n" +
+            "aprobado\n" +
+            "4-0\tRECONOCIMIENTO IDIOMA NIVEL I - II - III\t0\t0\t0\tP\t9\t1\tF\tAP\n" +
+            "  02\tperiodo academico | 2012-I\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "no aprobado\n" +
+            "1000004-1\tCALCULO DIFERENCIAL\t4\t0\t4\tB\t4\t1\t\t2.2\n" +
+            "aprobado\n" +
+            "2016350-33C\tMATEMATICAS DISCRETAS\t4\t0\t4\tB\t4\t1\t\t3.5\n" +
+            "aprobado\n" +
+            "2016375-33C\tPROGRAMACION ORIENTADA A OBJETOS\t4\t0\t4\tC\t3\t1\t\t3.6\n" +
+            "  03\tperiodo academico | 2012-II\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "aprobado\n" +
+            "1000004-33C\tCALCULO DIFERENCIAL\t4\t0\t4\tB\t4\t2\t\t3.7\n" +
+            "aprobado\n" +
+            "2016698-33C\tELEMENTOS DE COMPUTADORES\t4\t0\t4\tC\t3\t1\t\t5.0\n" +
+            "aprobado\n" +
+            "2016699-33C\tESTRUCTURAS DE DATOS\t4\t0\t4\tC\t3\t1\t\t3.1\n" +
+            "aprobado\n" +
+            "2021152-33C\tCUANTICA PARA TODOS Y PARA TODO\t3\t0\t3\tL\t3\t1\t\t4.5\n" +
+            "  04\tperiodo academico | 2013-I\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "no aprobado\n" +
+            "1000005-33C\tCALCULO INTEGRAL\t4\t0\t4\tB\t4\t1\t\t1.9\n" +
+            "no aprobado\n" +
+            "1000019-33C\tFUNDAMENTOS DE MECANICA\t6\t0\t6\tB\t4\t1\t\t2.7\n" +
+            "aprobado\n" +
+            "2016353-33C\tBASES DE DATOS\t4\t0\t4\tC\t3\t1\t\t3.8\n" +
+            "aprobado\n" +
+            "2016697-33C\tARQUITECTURA DE COMPUTADORES\t4\t0\t4\tC\t3\t1\t\t4.3\n" +
+            "  05\tperiodo academico | 2013-II\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "aprobado\n" +
+            "1000005-16\tCALCULO INTEGRAL\t4\t0\t4\tB\t4\t2\t\t3.5\n" +
+            "aprobado\n" +
+            "1000019-14\tFUNDAMENTOS DE MECANICA\t6\t0\t6\tB\t4\t2\t\t3.4\n" +
+            "aprobado\n" +
+            "1000013-22\tPROBABILIDAD Y ESTADISTICA FUNDAMENTAL\t4\t0\t4\tB\t3\t1\t\t3.7\n" +
+            "aprobado\n" +
+            "2016707-1\tSISTEMAS OPERATIVOS\t4\t0\t4\tC\t3\t1\t\t4.2\n" +
+            "  06\tperiodo academico | 2014-I\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "aprobado\n" +
+            "1000003-4\tALGEBRA LINEAL\t4\t0\t4\tB\t4\t1\t\t3.7\n" +
+            "aprobado\n" +
+            "2015174-2\tINTRODUCCION A LA TEORIA DE LA COMPUTACION\t4\t0\t4\tB\t4\t1\t\t4.6\n" +
+            "no aprobado\n" +
+            "1000017-11\tFUNDAMENTOS DE ELECTRICIDAD Y MAGNETISMO\t6\t0\t6\tB\t4\t1\t\t2.9\n" +
+            "aprobado\n" +
+            "2025964-1\tMATEMATICAS DISCRETAS II\t4\t0\t4\tB\t4\t1\t\t4.5\n" +
+            "  07\tperiodo academico | 2014-II\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "no aprobado\n" +
+            "1000006-7\tCALCULO EN VARIAS VARIABLES\t4\t0\t4\tB\t4\t1\t\t2.5\n" +
+            "aprobado\n" +
+            "1000047-9\tINGLES IV- SEMESTRAL\t4\t4\t8\tP\t3\t1\t\tAP\n" +
+            "aprobado\n" +
+            "1000017-13\tFUNDAMENTOS DE ELECTRICIDAD Y MAGNETISMO\t6\t0\t6\tB\t4\t2\t\t3.5\n" +
+            "aprobado\n" +
+            "2016701-2\tINGENIERIA DE SOFTWARE I\t4\t0\t4\tC\t3\t1\t\t4.2\n" +
+            "  08\tperiodo academico | 2015-I\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "aprobado\n" +
+            "1000006-16\tCALCULO EN VARIAS VARIABLES\t4\t0\t4\tB\t4\t2\t\t3.2\n" +
+            "aprobado\n" +
+            "2016696-2\tALGORITMOS\t4\t0\t4\tB\t3\t1\t\t3.5\n" +
+            "aprobado\n" +
+            "2025967-2\tREDES DE COMPUTADORES\t4\t0\t4\tC\t3\t1\t\t3.7\n" +
+            "  09\tperiodo academico | 2015-II\t\t\n" +
+            "codigo-gr\tcurso\tHAP\tHAI\tTHS\ttip\tC\tN\tS\tcal.\n" +
+            "aprobado\n" +
+            "2015703-13\tINGENIERIA ECONOMICA\t4\t0\t4\tB\t3\t1\t\t5.0\n" +
+            "aprobado\n" +
+            "2016722-1\tCOMPUTACION PARALELA Y DISTRIBUIDA\t4\t0\t4\tC\t3\t1\t\t4.0\n" +
+            "aprobado\n" +
+            "2025970-2\tMODELOS Y SIMULACION\t4\t0\t4\tC\t3\t1\t\t3.9\n" +
+            "aprobado\n" +
+            "2025994-2\tTEORIA DE LA INFORMACION Y SISTEMAS DE COMUNICACION\t4\t0\t4\tC\t3\t1\t\t4.7\n" +
+            " \t\t\n" +
+            "Promedio Academico\t[4.0]\n" +
+            "Promedio Aritmetico Ponderado Acumulado - PAPA\t[3.7]\n" +
+            "\t\n" +
+            "52.7%\n" +
+            "% de avance en los creditos exigidos del plan de estudios\n" +
+            "\n" +
+            "\t\t\t\t\t\t\t\t\t\t\n" +
+            "\t\n" +
+            "\t\t\t\t\t\t\t\t\t\t\n" +
+            "creditos\tplan de estudios\tnivel\ttotal estudiante\t\n" +
+            "fundam.\tdiscipl.\tlibre e.\ttotal  \n" +
+            "exigidos\t51\t81\t33\t165\t20\t185\t\n" +
+            "aprobados\t45\t39\t3\t87\t20\t107\t\n" +
+            "aprobados plan\t45\t39\t3\t87\t--\t87\t\n" +
+            "pendientes\t6\t42\t30\t78\t0\t78\t\n" +
+            "inscritos\t76\t39\t9\t124\t11\t135\t\n" +
+            "Creditos excedentes\tFundamentacion\t0\tDisciplinar-Profesional\t0\tTotal creditos excedentes\t0\t\n" +
+            "Total de creditos cancelados en los periodos cursados\t17\t\n" +
+            "resumen de creditos\t\n" +
+            "Cupo adicional de creditos\t80\t\n" +
+            "Cupo creditos\t121\t\n" +
+            "cupo de creditos menos creditos pendientes\t43\t\n" +
+            "\n" +
+            " \n" +
+            "version impresion\n" +
+            "\n" +
+            "inicio | comentarios y sugerencias | preguntas frecuentes | descarga de archivos | mapa del sitio | noticias | terminos de uso \n" +
+            "Sistema de Informacion Academica [Nivel Nacional]\n" +
+            "Ciudad Universitaria, Cra 30 # 45-03 - Edificio 103 Polideportivo 2 Piso, Bogota - Colombia | www.registro.unal.edu.co | divregistro_bog@unal.edu.co\n" +
+            "Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad Nacional de Colombia 2016"
 
     def setup() {
     }
@@ -175,7 +169,7 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         def periods = controller.getPeriods(academicRecord)
         def periodsSize = periods.size()
         then:"size of periods"
-        periodsSize == 4
+        periodsSize == 9
     }
 
     def "testing periods name"() {
@@ -211,8 +205,8 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         PAPA[a] == c
 
         where: "The PAPA in each period is..."
-        a << [0, 1, 2, 3]
-        c << [3.525510204081632, 3.5945945945945947, 3.643548387096774, 3.6892857142857145]
+        a << [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        c << [4.25, 3.7239999999999998, 3.8342105263157893, 3.623076923076923, 3.631818181818182, 3.6890243902439024, 3.646236559139785, 3.62621359223301, 3.706956521739131]
     }
 
     @Unroll
@@ -226,10 +220,15 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
 
         where: "The PA in each period is..."
         a || c
-        0 || 3.592391304347826
-        1 || 3.6571428571428575
-        2 || 3.701694915254238
-        3 || 3.742537313432836
+        0 || 4.25
+        1 || 3.7239999999999998
+        2 || 4.026470588235293
+        3 || 3.7416666666666667
+        4 || 3.9351851851851847
+        5 || 3.932857142857143
+        6 || 3.9000000000000004
+        7 || 3.912048192771085
+        8 || 3.9736842105263164
     }
 
     def "get progress"(){
@@ -257,7 +256,7 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         def sum = controller.getSumCredits(periods)
 
         expect:
-        sum == (134 as BigDecimal)
+        sum == (95 as BigDecimal)
     }
 
     @Unroll
@@ -268,9 +267,9 @@ Actualizado: 1 de Febrero de 2016 | Todos los derechos reservados ©Universidad 
         expect:
         record[i] == rec
 
-        where: "the first 4 positions are..."
-        i   << [0, 1, 2, 3]
-        rec << [3.525510204081632, 3.5945945945945947, 3.643548387096774, 3.6892857142857145]
+        where: "the positions are..."
+        i << [0, 1, 2]
+        rec << [4.25, 3.7239999999999998, 3.8342105263157893]
     }
 }
 
