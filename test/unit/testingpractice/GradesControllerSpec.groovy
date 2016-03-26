@@ -271,5 +271,40 @@ class GradesControllerSpec extends Specification {
         i << [0, 1, 2]
         rec << [4.25, 3.7239999999999998, 3.8342105263157893]
     }
+	
+	@Unroll
+    def "get subjects PA for period #a is #c with data pipes"(){
+        given: "A periods array"
+        def periods = controller.getPeriods(academicRecord)
+        def PAPA = controller.getPA(periods)
+
+        expect:
+        PAPA[a] == c
+
+        where: "The PA in each period is..."
+		a << [0,1,2,3,4,5,6,7,8]
+		c << [
+			4.25,3.7239999999999998,
+			4.026470588235293,
+			3.7416666666666667,
+			3.9351851851851847,
+			3.932857142857143,
+			3.9000000000000004,
+			3.912048192771085,
+			3.9736842105263164
+		]
+    }
+	
+	def "testing periods size with helpers"() {
+        when:
+        def periods = controller.getPeriods(academicRecord)
+        def periodsSize = periods.size()
+        then:"size of periods"
+		isPeriodEqual(periodsSize,9)
+    }
+	
+	def isPeriodEqual(PeriodA, PeriodB){
+		PeriodA == PeriodB
+	}
 }
 
