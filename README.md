@@ -15,7 +15,7 @@
   - [ ] 4 Pruebas de integración
   - [x] 4.1 Pruebas existentes
   - [x] 4.2 Pruebas 10 materias
-  - [ ] 4.3 Nuevo controlador
+  - [x] 4.3 Nuevo controlador
   - [ ] 4.4 Pruebas extra al controlador
   - [ ] 4.5 Asignaturas repetidas y pruebas
   - [ ] 5 Realice un informe por parte de todo el equipo
