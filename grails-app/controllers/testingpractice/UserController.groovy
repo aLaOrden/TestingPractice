@@ -13,6 +13,13 @@ class UserController {
         user.subjects.each {
             sumGrades += it.grade
         }
-        return sumGrades / user.subjects.size()
+        return sumGrades / getGradesCount(user)
     }
+
+    def GetGradesAveragesUsersCollection(ArrayList<User> Users){
+        def averages = new ArrayList<Integer>()
+        Users.each {averages.add(getGradesAverages(it))}
+        return averages
+    }
+
 }
